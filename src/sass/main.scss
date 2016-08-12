@@ -1,0 +1,17 @@
+﻿
+@import "header";
+@import "checkboks-line-style";
+@import "main-part-style";
+@import "calendar-style";
+
+body {
+  background: red;
+  margin: 0;
+  padding: 0;
+
+  main {
+    max-width: 1600px;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+}

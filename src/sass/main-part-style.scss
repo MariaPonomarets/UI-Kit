@@ -1,0 +1,195 @@
+﻿$form-border-color: #D6D6D6;
+$form-geader-bg: #F6F5F6;
+$text-color: #777777;
+$active-color: #4E90C7;
+$text-active: #333333;
+$dropdown-bg-color: #F6F6F6;
+$dropdown-border: #C7C6CB;
+$dropdown-arrow: #BFBFBF;
+$dropdown-bg-active: #E5F2FD;
+
+
+#main-part {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  padding-bottom: 4%;
+  flex-wrap: wrap;
+  align-content: space-around;
+  color: $text-color;
+
+  .main-elem {
+    .form-container {
+      display: block;
+      width: 453px;
+      height: 390px;
+      border: 1px solid $form-border-color;
+      border-radius: 6px;
+
+      .form-name {
+        background-color: $form-geader-bg;
+        border-bottom: 1px solid $form-border-color;
+        font-size: 20pt;
+        padding: 21px 0 21px 31px;
+        font-weight: 600;
+      }
+
+      input {
+        width: 314px;
+        height: 62px;
+        margin-left: 40px;
+        border: 1px solid $form-border-color;
+        border-radius: 6px;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-position-x: 20px;
+        padding-left: 60px;
+        font-size: 20px;
+        outline: none;
+      }
+
+      #login {
+        background-image: url('../img/Male-User-def.png');
+        margin-top: 40px;
+        margin-bottom: 20px;
+
+        &:focus {
+          background-image: url('../img/Male-User-active.png');
+          border-color: $active-color;
+          color: $text-active;
+        }
+      }
+
+      #password {
+        background-image: url('../img/Lock-def .png');
+        margin-bottom: 27px;
+
+        &:focus {
+          background-image: url('../img/Lock-active.png');
+          border-color: $active-color;
+          color: $text-active;
+        }
+      }
+
+      .error-container {
+        font-size: 18px;
+        color: red;
+        padding: 20px 0px 20px 40px;
+      }
+
+      button {
+        width: 181px;
+        height: 60px;
+        background-color: $active-color;
+        border-radius: 6px;
+        color: #fff;
+        border: none;
+        float: right;
+        margin-right: 40px;
+        font-size: 25px;
+
+        &:hover {
+          background-color: #76A9D4;
+        }
+      }
+    }
+
+    .dropdown-container-close {
+      width: 453px;
+      height: 62px;
+      background-color: $dropdown-bg-color;
+      border: 1px solid $dropdown-border;
+      border-radius: 6px;
+      margin-top: 55px;
+    }
+
+    .dropdown-name {
+      font-size: 20pt;
+      /* text-align: center; */
+      .title {
+        padding-top: 15px;
+        padding-left: 15px;
+        width: 75%;
+        float: left;
+        color: #333333;
+      }
+
+
+      button {
+        width: 20%;
+        height: 62px;
+        float: right;
+        border-radius: 6px;
+        border: none;
+        background-color: transparent;
+        font-size: 50px;
+        cursor: pointer;
+        color: $dropdown-arrow;
+        outline: none;
+      }
+
+      .open {
+        background-color: #fff;
+        border-left: 1px solid $dropdown-border;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 0px;
+      }
+    }
+
+    .dropdown-content {
+      background-color: #fff;
+      border-top: 1px solid $dropdown-border;
+      margin-top: 60px;
+      width: 451px;
+      z-index: 2;
+
+      .active {
+        background-color: $dropdown-bg-active;
+
+        a {
+          color: $active-color;
+        }
+      }
+
+      ul {
+        padding-left: 0px;
+        margin: 0;
+
+        li {
+          list-style: none;
+          font-size: 20pt;
+          padding: 13px 10px 13px 10px;
+          cursor: pointer;
+
+          a {
+            color: $text-color;
+            text-decoration: none;
+          }
+
+          &:hover {
+            @extend .active;
+          }
+        }
+      }
+    }
+
+    .dropdown-open {
+      height: auto;
+
+      .dropdown-name {
+        .title {
+          color: #C9C9C9;
+        }
+      }
+    }
+
+    .hide-elem {
+      display: none;
+    }
+  }
+}

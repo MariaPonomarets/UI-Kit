@@ -1,0 +1,304 @@
+﻿$color-on: #A9CF55;
+$color-off: #FF7F68;
+$color-default: #DEDEDE;
+$color-selected-bg: #EDFDCA;
+$color-font: #777777;
+$color-selected: #A9CF55;
+$color-circle-def:#EDEDED;
+#chekboks-line {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  flex-wrap:wrap;
+  align-content:space-around;
+
+  .checkboks-item {
+    .switch {
+      position: relative;
+      display: block;
+      vertical-align: top;
+      width: 100px;
+      height: 50px;
+      margin: 0 10px 10px 0;
+      border-radius: 50%/100%;
+      cursor: pointer;
+      color: #fff;
+      padding-bottom: 30px;
+    }
+
+    .switch-input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+
+    .switch-label {
+      position: relative;
+      display: block;
+      height: inherit;
+      font-size: 15pt;
+      text-transform: uppercase;
+      background: $color-off;
+      border-radius: inherit;
+    }
+
+    .switch-label:before, .switch-label:after {
+      position: absolute;
+      top: 50%;
+      margin-top: -.5em;
+      line-height: 1;
+      -webkit-transition: inherit;
+      -moz-transition: inherit;
+      -o-transition: inherit;
+      transition: inherit;
+    }
+
+    .switch-label:before {
+      content: attr(data-off);
+      right: 14px;
+    }
+
+    .switch-label:after {
+      content: attr(data-on);
+      left: 14px;
+      color: #FFFFFF;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+    }
+
+    .switch-input:checked ~ .switch-label {
+      background: $color-on;
+    }
+
+    .switch-input:checked ~ .switch-label:before {
+      opacity: 0;
+    }
+
+    .switch-input:checked ~ .switch-label:after {
+      opacity: 1;
+    }
+
+    .switch-handle {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+      background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+      border-radius: 100%;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .switch-input:checked ~ .switch-handle {
+      left: 53px;
+    }
+
+    .switch-label, .switch-handle {
+      transition: All 0.3s ease;
+      -webkit-transition: All 0.3s ease;
+      -moz-transition: All 0.3s ease;
+      -o-transition: All 0.3s ease;
+    }
+
+    .on {
+      .switch-label {
+        background-color: $color-on;
+      }
+
+      .switch-label:before {
+        content: attr(data-off);
+        opacity: 0;
+      }
+
+      .switch-label:after {
+        content: attr(data-on);
+        opacity: 1;
+      }
+
+      .switch-input:checked ~ .switch-label {
+        background: $color-off;
+      }
+
+      .switch-input:checked ~ .switch-label:before {
+        opacity: 1;
+      }
+
+      .switch-input:checked ~ .switch-label:after {
+        opacity: 0;
+      }
+
+      .switch-handle {
+        left: 53px;
+      }
+
+      .switch-input:checked ~ .switch-handle {
+        left: 4px;
+      }
+    }
+  }
+
+  .rectangle {
+    .switch {
+      border-radius: 6px;
+    }
+
+    .switch-handle {
+      border-radius: 6px;
+    }
+
+    .switch-label {
+      font-size: 30pt;
+
+      &:before {
+        right: 8px;
+      }
+
+      &:after {
+        left: 8px;
+      }
+    }
+  }
+
+  input.radio:empty {
+    display: none;
+  }
+
+  input.checkbox:empty {
+    display: none;
+  }
+
+  .class-for-checkbox-label {
+    position: relative;
+    float: left;
+    text-indent: 2.1em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 20pt;
+    padding-top: 5px;
+    color: $color-font;
+  }
+
+  .class-for-checkbox-before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 34px;
+    height: 34px;
+    border: 2px solid $color-default;
+    border-radius: 50%;
+  }
+
+  input.checkbox:empty ~ label {
+    @extend .class-for-checkbox-label;
+    
+  }
+  input.checkbox:hover{
+.class-for-checkbox-before{
+  border-color:red;
+}
+  }
+
+  input.checkbox:empty ~ label:before {
+    @extend .class-for-checkbox-before;
+    border-radius: 6px;
+  }
+
+  input.radio:empty ~ label {
+    @extend .class-for-checkbox-label;
+  }
+
+  input.radio:empty ~ label:before {
+    @extend .class-for-checkbox-before;
+  }
+
+  input.hover:empty ~ label:before {
+    @extend .class-for-checkbox-before;
+    border-color: $color-on;
+  }
+
+  input.selected:empty ~ label:before {
+    @extend .class-for-checkbox-before;
+    border-color: $color-on;
+    background-color: $color-selected-bg;
+  }
+
+  input#check-s:checked ~ label:before {
+    content: '\2714';
+    text-indent: .3em;
+    color: $color-selected;
+  }
+
+  input#radio-s:checked ~ label:before {
+    content: '\2022';
+    text-indent: 0em;
+    line-height: .36em;
+    color: $color-selected;
+    font-size: 92px;
+  }
+  .circle{
+     width: 161px;
+      height: 161px;
+      display: block;
+      border-radius: 50%;
+      background-color: $color-default;
+      float: left;
+      margin-top: -20px;
+  }
+  .seventy-five {
+
+    pie {
+     @extend .circle;
+
+      pie {
+        width: 140px;
+        height: 140px;
+        text-align: center;
+        background-color: #fff;
+        vertical-align: middle;
+        margin: 10px;
+         div{
+          color:$color-font;
+          font-size:34px;
+          text-align:center;
+          padding-top:30%;
+        }
+      }
+    }
+
+    .color-part {
+      background-image: linear-gradient(150deg, transparent 50%, $color-selected 50%), linear-gradient(90deg, $color-circle-def 50%, $color-selected 50%);
+    }
+  }
+
+  .draw-circle {
+    
+    pie {
+          @extend .circle;
+       
+      }
+    .color-part {
+      background-image: linear-gradient(180deg, transparent 50%, $color-selected 50%), linear-gradient(90deg, $color-circle-def 50%, $color-selected 50%);
+    }
+  }
+
+  .checkbox-style {
+    margin-bottom: 46px;
+    padding-bottom: 46px;
+    padding-top: 5px;
+  }
+}

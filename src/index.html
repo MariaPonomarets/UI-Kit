@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet" />
+
+</head>
+<body>
+  <header>
+    <div class="flex-container">
+      <div class="mobile-menu">
+        <i class="material-icons">view_headline</i>
+      </div>
+      <div class="flex-item menu">
+        <a href="#">Home</a>
+      </div>
+      <div class="flex-item menu">
+        <a href="#">Portfolio</a>
+      </div>
+      <div class="flex-item menu">
+        <a href="#">About</a>
+      </div>
+      <div class="flex-item menu">
+        <a href="#">Blog</a>
+      </div>
+      <div class="flex-item menu">
+        <a href="#">Contact</a>
+      </div>
+      <div class="flex-item menu" id="search">
+        <input type="text" class="search" placeholder="Search..." />
+      </div>
+      <div class="flex-item">
+        <img src="img/header/Bell.png" width="40" />
+        <div class="alert-count"><p>4</p></div>
+      </div>
+      <div class="flex-item">
+        <img src="img/header/Bubble.png" />
+        <div class="message-count"><p>14</p></div>
+      </div>
+      <div class="flex-item user">
+        <img src="img/header/user-icon.png" />
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="chekboks-line">
+      <div class="checkboks-item">
+        <label class="switch">
+          <input class="switch-input" type="checkbox" />
+          <span class="switch-label" data-on="On" data-off="Off"></span>
+          <span class="switch-handle"></span>
+        </label>
+        <label class="switch on">
+          <input class="switch-input" type="checkbox" />
+          <span class="switch-label" data-on="On" data-off="Off"></span>
+          <span class="switch-handle"></span>
+        </label>
+      </div>
+      <div class="checkboks-item rectangle">
+        <label class="switch">
+          <input class="switch-input" type="checkbox" />
+          <span class="switch-label material-icons" data-on="&#xE876" data-off="&#xE14C"></span>
+          <span class="switch-handle"></span>
+        </label>
+        <label class="switch on">
+          <input class="switch-input" type="checkbox" />
+          <span class="switch-label material-icons" data-on="&#xE876" data-off="&#xE14C"></span>
+          <span class="switch-handle"></span>
+        </label>
+      </div>
+      <div class="checkboks-item">
+        <div class="checkbox-style">
+          <input type="checkbox" name="checkbox" id="check-df" class="checkbox" />
+          <label for="chek-df">Default</label>
+        </div>
+        <div class="radio-style">
+          <input type="radio" name="radio" id="radio-df" class="radio" />
+          <label for="radio-df">Default</label>
+        </div>
+      </div>
+      <div class="checkboks-item">
+        <div class="checkbox-style">
+          <input type="checkbox" name="checkbox" id="check-h" class="checkbox hover" />
+          <label for="chek-h">Hover</label>
+        </div>
+
+        <div class="radio-style">
+          <input type="radio" name="radio" id="radio-h" class="radio hover" />
+          <label for="radio-h">Hover</label>
+        </div>
+      </div>
+      <div class="checkboks-item">
+        <div class="checkbox-style">
+          <input type="checkbox" name="checkbox" id="check-s" class="checkbox selected" checked />
+          <label for="chek-s">Selected</label>
+        </div>
+        <div class="radio-style">
+          <input type="radio" name="radio" id="radio-s" class="radio selected material-icons" checked />
+          <label for="radio-s">Selected</label>
+        </div>
+      </div>
+      <div class="checkboks-item seventy-five">
+        <pie class="color-part">
+          <pie><div>75%</div></pie>
+        </pie>
+      </div>
+      <div class="checkboks-item draw-circle">
+        <pie class="color-part">
+        </pie>
+      </div>
+    </section>
+    <section id="main-part">
+      <div class="main-elem">
+      <div class="form-container">
+        <div class="form-name">SIGN IN</div>
+        <form>
+          <input type="text" id="login" placeholder="Login" value="John D|"/>
+          <input type="password" id="password" placeholder="Password"/>
+          <span class="error-container hide-elem"><br />fill all fields</span>
+
+          <button id="log-in">Log In</button>
+        </form>
+
+      </div>  
+        <div class="dropdown-container-close">
+          <div class="dropdown-name"><div class="title">Selected Something</div> <button class="material-icons" id="arrow-open-close">arrow_drop_up</button></div>
+          <div id="close-dropdown" class="dropdown-content hide-elem">
+            <ul>
+              <li><a href="#first">First Option</a></li>
+              <li><a href="#anotger">Another Option</a></li>
+              <li><a href="#ok">Ok,that's enough</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown-container-close dropdown-open">
+          <div class="dropdown-name"><div class="title">Selected Something</div> <button class="material-icons open" id="arrow-open-close2">arrow_drop_down</button></div>
+          <div id="close-dropdown2" class="dropdown-content">
+            <ul>
+              <li><a href="#first">First Option</a></li>
+              <li class="active"><a href="#anotger">Another Option</a></li>
+              <li><a href="#ok">Ok,that's enough</a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      <div class="main-elem">
+        <div class="calendar-container">
+          <div class="calendar-header"><i class="material-icons prev">arrow_back</i><div class="mounth">OCTOBER</div><div class="year">2014</div><i class="material-icons next">arrow_forward</i></div>
+          <table>
+          <tr class="week">
+            <td class="day-of-week">SU</td>
+            <td class="day-of-week">MO</td>
+            <td class="day-of-week">TU</td>
+            <td class="day-of-week">WE</td>
+            <td class="day-of-week">TH</td>
+            <td class="day-of-week">FR</td>
+            <td class="day-of-week">SA</td>
+            </tr>
+            <tr class="days">
+              <td class=""><div class="day off"></div></td>
+              <td class=""><div class="day off"></div></td>
+              <td class=""><div class="day off"></div></td>
+              <td class=""><div class="day">1</div></td>
+              <td class=""><div class="day">2</div></td>
+              <td class=""><div class="day">3</div></td>
+              <td class=""><div class="day">4</div></td>
+            </tr>
+            <tr class="days">
+              <td class=""><div class="day">5</div></td>
+              <td class=""><div class="day">6</div></td>
+              <td class=""><div class="day">7</div></td>
+              <td class=""><div class="day">8</div></td>
+              <td class=""><div class="day">9</div></td>
+              <td class=""><div class="day">10</div></td>
+              <td class=""><div class="day">11</div></td>
+            </tr>
+            <tr class="days">
+              <td class=""><div class="day">12</div></td>
+              <td class=""><div class="day">13</div></td>
+              <td class=""><div class="day">14</div></td>
+              <td class=""><div class="active-day">15</div></td>
+              <td class=""><div class="day">16</div></td>
+              <td class=""><div class="day">17</div></td>
+              <td class=""><div class="day">18</div></td>
+            </tr>
+            <tr class="days">
+              <td class=""><div class="day">19</div></td>
+              <td class=""><div class="day">20</div></td>
+              <td class=""><div class="day">21</div></td>
+              <td class=""><div class="day">22</div></td>
+              <td class=""><div class="day">23</div></td>
+              <td class=""><div class="active-day">24</div></td>
+              <td class=""><div class="day">25</div></td>
+            </tr>
+            <tr class="days">
+              <td class=""><div class="day">26</div></td>
+              <td class=""><div class="day">27</div></td>
+              <td class=""><div class="day">28</div></td>
+              <td class=""><div class="day">29</div></td>
+              <td class=""><div class="day">30</div></td>
+              <td class=""><div class="day">31</div></td>
+              <td class=""><div class="day off"></div></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="main-elem">ererer</div>
+      <div class="main-elem">rererer</div>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
