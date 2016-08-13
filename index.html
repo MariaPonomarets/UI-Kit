@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet" />
+
+</head>
+<body>
+  <header>
+    <div class="flex-container">
+      <div class="mobile-menu">
+        <i class="material-icons">view_headline</i>
+      </div>
+      <div class="flex-item menu">
+        <a href="#">Home</a>
+      </div>
+      <div class="flex-item menu">
+        <a href="#">Portfolio</a>
+      </div>
+      <div class="flex-item menu">
+        <a href="#">About</a>
+      </div>
+      <div class="flex-item menu">
+        <a href="#">Blog</a>
+      </div>
+      <div class="flex-item menu">
+        <a href="#">Contact</a>
+      </div>
+      <div class="flex-item menu" id="search">
+        <input type="text" class="search" placeholder="Search..." />
+      </div>
+      <div class="flex-item">
+        <img src="img/header/Bell.png" width="40" />
+        <div class="alert-count"><p>4</p></div>
+      </div>
+      <div class="flex-item">
+        <img src="img/header/Bubble.png" />
+        <div class="message-count"><p>14</p></div>
+      </div>
+      <div class="flex-item user">
+        <img src="img/header/user-icon.png" />
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="chekboks-line">
+      <div class="checkboks-item">
+        <label class="switch">
+          <input class="switch-input" type="checkbox" />
+          <span class="switch-label" data-on="On" data-off="Off"></span>
+          <span class="switch-handle"></span>
+        </label>
+        <label class="switch on">
+          <input class="switch-input" type="checkbox" />
+          <span class="switch-label" data-on="On" data-off="Off"></span>
+          <span class="switch-handle"></span>
+        </label>
+      </div>
+      <div class="checkboks-item rectangle">
+        <label class="switch">
+          <input class="switch-input" type="checkbox" />
+          <span class="switch-label material-icons" data-on="&#xE876" data-off="&#xE14C"></span>
+          <span class="switch-handle"></span>
+        </label>
+        <label class="switch on">
+          <input class="switch-input" type="checkbox" />
+          <span class="switch-label material-icons" data-on="&#xE876" data-off="&#xE14C"></span>
+          <span class="switch-handle"></span>
+        </label>
+      </div>
+      <div class="checkboks-item chek">
+        <div class="checkbox-style">
+          <div class="checkbox-container">
+            <div class="checkbox def">
+              <input type="checkbox" name="checkbox" id="check-df" class="checkbox-def" />
+            </div>
+            <label for="chek-df">Default</label>
+          </div>
+          <div class="checkbox-container">
+            <div class="checkbox def hover">
+              <input type="checkbox" name="checkbox" id="check-hover" class="checkbox-def" />
+            </div>
+            <label for="chek-hover">Hover</label>
+          </div>
+          <div class="checkbox-container">
+            <div class="checkbox def hover selected">
+              <input type="checkbox" name="checkbox" id="check-selected" class="checkbox-def" />
+
+            </div>
+            <label for="chek-selected">Selected</label>
+          </div>
+
+        </div>
+        <div class="radio-style">
+          <div class="radio-container">
+            <div class="radio def">
+              <input type="radio" name="checkbox" id="radio-df" class="checkbox-def" />
+            </div>
+            <label for="radio-df">Default</label>
+          </div>
+          <div class="radio-container">
+            <div class="radio def hover">
+              <input type="radio" name="checkbox" id="radio-hover" class="checkbox-def" />
+            </div>
+            <label for="radio-hover">Hover</label>
+          </div>
+          <div class="radio-container">
+            <div class="radio def hover selected-radio">
+              <input type="checkbox" name="checkbox" id="check-selected" class="checkbox-def" />
+            </div>
+            <label for="chek-selected">Selected</label>
+          </div>
+        </div>
+      </div>
+      <div class="checkboks-item seventy-five">
+        <pie class="color-part">
+          <pie><div>75%</div></pie>
+        </pie>
+      </div>
+      <div class="checkboks-item draw-circle">
+        <pie class="color-part">
+        </pie>
+      </div>
+    </section>
+    <section id="main-part">
+      <div class="main-elem">
+        <div class="form-container">
+          <div class="form-name">SIGN IN</div>
+          <form>
+            <input type="text" id="login" placeholder="Login" value="John D|" />
+            <input type="password" id="password" placeholder="Password" />
+            <span class="error-container hide-elem"><br />fill all fields</span>
+            <button id="log-in">Log In</button>
+          </form>
+        </div>
+        <div class="dropdown-container-close">
+          <div class="dropdown-name"><div class="title">Selected Something</div> <button class="material-icons" id="arrow-open-close">arrow_drop_up</button></div>
+          <div id="close-dropdown" class="dropdown-content hide-elem">
+            <ul>
+              <li><a href="#first">First Option</a></li>
+              <li><a href="#anotger">Another Option</a></li>
+              <li><a href="#ok">Ok,that's enough</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown-container-close dropdown-open">
+          <div class="dropdown-name"><div class="title">Selected Something</div> <button class="material-icons open" id="arrow-open-close2">arrow_drop_down</button></div>
+          <div id="close-dropdown2" class="dropdown-content">
+            <ul>
+              <li><a href="#first">First Option</a></li>
+              <li class="active"><a href="#anotger">Another Option</a></li>
+              <li><a href="#ok">Ok,that's enough</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main-elem">
+        <div class="calendar-container">
+          <div class="calendar-header"><i class="material-icons prev">arrow_back</i><div class="mounth">OCTOBER</div><div class="year">2014</div><i class="material-icons next">arrow_forward</i></div>
+          <table>
+            <thead>
+              <tr class="week">
+                <td class="day-of-week">SU</td>
+                <td class="day-of-week">MO</td>
+                <td class="day-of-week">TU</td>
+                <td class="day-of-week">WE</td>
+                <td class="day-of-week">TH</td>
+                <td class="day-of-week">FR</td>
+                <td class="day-of-week">SA</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="days">
+                <td class=""><div class="day off"></div></td>
+                <td class=""><div class="day off"></div></td>
+                <td class=""><div class="day off"></div></td>
+                <td class=""><div class="day">1</div></td>
+                <td class=""><div class="day">2</div></td>
+                <td class=""><div class="day">3</div></td>
+                <td class=""><div class="day">4</div></td>
+              </tr>
+              <tr class="days">
+                <td class=""><div class="day">5</div></td>
+                <td class=""><div class="day">6</div></td>
+                <td class=""><div class="day">7</div></td>
+                <td class=""><div class="day">8</div></td>
+                <td class=""><div class="day">9</div></td>
+                <td class=""><div class="day">10</div></td>
+                <td class=""><div class="day">11</div></td>
+              </tr>
+              <tr class="days">
+                <td class=""><div class="day">12</div></td>
+                <td class=""><div class="day">13</div></td>
+                <td class=""><div class="day">14</div></td>
+                <td class="start-day"><div class="active-day">15</div></td>
+                <td class="active-all-day"><div class="">16</div></td>
+                <td class="active-all-day"><div class="">17</div></td>
+                <td class="active-all-day end"><div class="">18</div></td>
+              </tr>
+              <tr class="space"></tr>
+              <tr class="days">
+                <td class="active-all-day start"><div class="">19</div></td>
+                <td class="active-all-day"><div class="">20</div></td>
+                <td class="active-all-day"><div class="">21</div></td>
+                <td class="active-all-day"><div class="">22</div></td>
+                <td class="active-all-day"><div class="">23</div></td>
+                <td class="end-day"><div class="active-day">24</div></td>
+                <td class=""><div class="day">25</div></td>
+              </tr>
+              <tr class="days">
+                <td class=""><div class="day">26</div></td>
+                <td class=""><div class="day">27</div></td>
+                <td class=""><div class="day">28</div></td>
+                <td class=""><div class="day">29</div></td>
+                <td class=""><div class="day">30</div></td>
+                <td class=""><div class="day">31</div></td>
+                <td class=""><div class="day off"></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="acthor-container">
+          <div class="icon-text">
+            <img src="img/photo-emma.png" class="photo" />
+            <div class="text">
+              <h3>Emma Stone</h3>
+              <p>The Amazing Spader-Man,</p><p> Ganster Squad,</p><p>The Croods</p>
+            </div>
+          </div>
+          <div class="icon-line">
+            <div class="heart">
+              <div class="img-heart"></div>
+              <p class="title">172</p>
+            </div>
+            <div class="friends">
+              <div class="img-friend"></div><p class="title">34</p>
+            </div>
+            <div class="eye">
+              <div class="img-eye"></div><p class="title">210</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-elem">
+        <div class="sliders-container">
+          <div class="first">
+            <div id="range-val">30</div>
+            <input type="range" min="0" max="100" value="30" id="slider1" />
+          </div>
+          <div class="second">
+            <input type="range" min="0" max="100" value="15" id="slider2" />
+            <input type="range" min="0" max="100" value="80" id="slider2A" />
+            <ul>
+              <li>0</li>
+              <li>25</li>
+              <li>50</li>
+              <li>75</li>
+              <li>100</li>
+            </ul>
+          </div>
+          <div class="third">
+            <div class="procent">0%</div><input type="range" min="0" max="100" value="80" id="slider3" /><div class="procent">100%</div>
+          </div>
+        </div>
+        <div class="video-container">
+          <video src="video/up-pixar-trailer.mp4" poster="img/imgpsh_fullsize.jpg">Your browser does not support the video tag. </video>
+          <div class="controls">
+            <div class="play">
+              <i class="material-icons" id="play">play_circle_filled</i>
+              <i class="material-icons hide-elem" id="stop">pause_circle_filled</i>
+            </div>
+            <div class="progress">
+              <input type="range" min="0" max="100" value="0" id="progress-bar" />
+            </div>
+            <div class="fullscreen"><i class="material-icons" id="full-screen">zoom_out_map</i></div>
+            <div class="mute"><i class="material-icons" id="valum">volume_up</i><i class="material-icons hide-elem" id="volum-off">volume_off</i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
