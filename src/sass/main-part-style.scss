@@ -448,12 +448,12 @@ $video-contol-bg: rgba(255,255,255,0.2);
           position: relative;
         }
 
-        #slider2{
-background-image: url('../img/progress.png');
-background-repeat: repeat-y;
-  //  background-attachment: fixed;
-background-size:30% 10px;
-    background-position: 30% 1px;
+        #slider2 {
+          background-image: url('../img/progress.png');
+          background-repeat: repeat-y;
+          //  background-attachment: fixed;
+          background-size: 30% 10px;
+          background-position: 30% 1px;
           //             background-image: linear-gradient(to right, $third-range-color 80%, rgba(255, 255, 255, 0) 0%);
         }
       }
@@ -522,6 +522,7 @@ background-size:30% 10px;
           opacity: 0.9;
           font-size: 30px;
           line-height: 50px;
+          cursor: pointer;
         }
 
         .play {
