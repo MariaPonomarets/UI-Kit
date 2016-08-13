@@ -4,7 +4,8 @@ $color-default: #DEDEDE;
 $color-selected-bg: #EDFDCA;
 $color-font: #777777;
 $color-selected: #A9CF55;
-$color-circle-def:#EDEDED;
+$color-circle-def: #EDEDED;
+
 #chekboks-line {
   display: flex;
   display: -webkit-box;
@@ -15,9 +16,8 @@ $color-circle-def:#EDEDED;
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
   padding-top: 4%;
-  padding-bottom: 4%;
-  flex-wrap:wrap;
-  align-content:space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
 
   .checkboks-item {
     .switch {
@@ -168,101 +168,90 @@ $color-circle-def:#EDEDED;
     }
   }
 
-  input.radio:empty {
-    display: none;
-  }
 
-  input.checkbox:empty {
-    display: none;
-  }
+  .chek {
+    label {
+      color: $color-font;
+      font-size: 18pt;
+      line-height: 34px;
+      padding: 0 10px 0 10px;
+    }
 
-  .class-for-checkbox-label {
-    position: relative;
-    float: left;
-    text-indent: 2.1em;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    font-size: 20pt;
-    padding-top: 5px;
-    color: $color-font;
-  }
-
-  .class-for-checkbox-before {
-    position: absolute;
-    display: block;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    content: '';
-    width: 34px;
-    height: 34px;
-    border: 2px solid $color-default;
-    border-radius: 50%;
-  }
-
-  input.checkbox:empty ~ label {
-    @extend .class-for-checkbox-label;
-    
-  }
-  input.checkbox:hover{
-.class-for-checkbox-before{
-  border-color:red;
-}
-  }
-
-  input.checkbox:empty ~ label:before {
-    @extend .class-for-checkbox-before;
-    border-radius: 6px;
-  }
-
-  input.radio:empty ~ label {
-    @extend .class-for-checkbox-label;
-  }
-
-  input.radio:empty ~ label:before {
-    @extend .class-for-checkbox-before;
-  }
-
-  input.hover:empty ~ label:before {
-    @extend .class-for-checkbox-before;
-    border-color: $color-on;
-  }
-
-  input.selected:empty ~ label:before {
-    @extend .class-for-checkbox-before;
-    border-color: $color-on;
-    background-color: $color-selected-bg;
-  }
-
-  input#check-s:checked ~ label:before {
-    content: '\2714';
-    text-indent: .3em;
-    color: $color-selected;
-  }
-
-  input#radio-s:checked ~ label:before {
-    content: '\2022';
-    text-indent: 0em;
-    line-height: .36em;
-    color: $color-selected;
-    font-size: 92px;
-  }
-  .circle{
-     width: 161px;
-      height: 161px;
-      display: block;
-      border-radius: 50%;
-      background-color: $color-default;
+    .checkbox-container {
       float: left;
-      margin-top: -20px;
+    }
+
+    .checkbox {
+      width: 34px;
+      height: 34px;
+      border-radius: 6px;
+      float: left;
+
+      input {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+
+      &:hover {
+        @extend .hover;
+      }
+    }
+
+    .def {
+      border: 1px solid $color-default;
+    }
+
+    .hover {
+      border-color: $color-selected;
+    }
+
+    .selected {
+      background-color: $color-selected-bg;
+      color: $color-selected;
+
+      &::before {
+        content: '\2714';
+        font-size: 20pt;
+        text-align: center;
+        line-height: 34px;
+        padding: 5px;
+      }
+    }
+    .radio-container{
+      @extend .checkbox-container;
+    }
+    .radio{
+       @extend .checkbox;
+       border-radius:50%;
+    }
+     .selected-radio{
+        background-color: $color-selected-bg;
+      color: $color-selected;
+
+      &::before {
+           content: '\2022';
+    font-size: 70pt;
+    text-align: center;
+    line-height: 34px;
+      }
+     }
   }
+
+  .circle {
+    width: 161px;
+    height: 161px;
+    display: block;
+    border-radius: 50%;
+    background-color: $color-default;
+    float: left;
+    margin-top: -20px;
+  }
+
   .seventy-five {
 
     pie {
-     @extend .circle;
+      @extend .circle;
 
       pie {
         width: 140px;
@@ -271,11 +260,12 @@ $color-circle-def:#EDEDED;
         background-color: #fff;
         vertical-align: middle;
         margin: 10px;
-         div{
-          color:$color-font;
-          font-size:34px;
-          text-align:center;
-          padding-top:30%;
+
+        div {
+          color: $color-font;
+          font-size: 34px;
+          text-align: center;
+          padding-top: 30%;
         }
       }
     }
@@ -286,11 +276,11 @@ $color-circle-def:#EDEDED;
   }
 
   .draw-circle {
-    
+
     pie {
-          @extend .circle;
-       
-      }
+      @extend .circle;
+    }
+
     .color-part {
       background-image: linear-gradient(180deg, transparent 50%, $color-selected 50%), linear-gradient(90deg, $color-circle-def 50%, $color-selected 50%);
     }
